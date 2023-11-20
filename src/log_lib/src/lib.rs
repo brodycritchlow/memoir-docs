@@ -57,6 +57,11 @@ impl LogParser {
     
 
 #[derive(Debug)]
+    pub fn new(filepath: &str) -> LogParser {
+        LogParser {
+            filepath: filepath.to_string(),
+        }
+    }
 pub struct FileLogger {
     pub filepath: String, 
     pub whitelist: Vec<LogLevel>,
